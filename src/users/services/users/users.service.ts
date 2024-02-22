@@ -22,4 +22,7 @@ export class UsersService {
   updateUser(id: number, updateUseretails: UpdateUserParams) {
     return this.UserRepository.update({ id }, { ...updateUseretails });
   }
+  deleteUser(id: number) {
+    return this.UserRepository.delete({ id });
+  }
 }
